@@ -11,7 +11,7 @@ Pagina del reto: https://www.aicrowd.com/challenges/mosquitoalert-challenge-2023
 
 | Integrante | Area de trabajo | GitHub |
 |---|---|---|
-| Nombre 1 | Investigacion del tema, situacion problematica, problema cientifico | usuario |
+| Carlos Aldana | Investigacion del tema, situacion problematica, problema cientifico | C3AC |
 | Nombre 2 | Objetivos, descripcion de datos, limpieza | usuario |
 | Nombre 3 | EDA - variables cuantitativas y categoricas | usuario |
 | Nombre 4 | EDA - cruces, outliers, inspeccion visual, conclusiones | usuario |
