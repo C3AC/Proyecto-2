@@ -1,0 +1,14 @@
+name: mosquito-eda
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - pillow
+  - scikit-learn
+  - jupyter
+  - ipykernel
+  - pip
