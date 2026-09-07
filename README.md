@@ -7,15 +7,6 @@ entomologos.
 
 Pagina del reto: https://www.aicrowd.com/challenges/mosquitoalert-challenge-2023
 
-## Equipo
-
-| Integrante | Area de trabajo | GitHub |
-|---|---|---|
-| Carlos Aldana | Investigacion del tema, situacion problematica, problema cientifico | C3AC |
-| Nombre 2 | Objetivos, descripcion de datos, limpieza | usuario |
-| Nombre 3 | EDA - variables cuantitativas y categoricas | usuario |
-| Nombre 4 | EDA - cruces, outliers, inspeccion visual, conclusiones | usuario |
-
 ## Estructura del repositorio
 
 ```
