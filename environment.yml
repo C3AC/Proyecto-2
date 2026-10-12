@@ -1,4 +1,4 @@
-name: mosquito-eda
+name: mosquito-ml
 channels:
   - conda-forge
 dependencies:
@@ -12,3 +12,13 @@ dependencies:
   - jupyter
   - ipykernel
   - pip
+  - pip:
+      # PyTorch con CUDA (GTX 1650); el índice de pytorch.org trae las ruedas con GPU
+      - --extra-index-url https://download.pytorch.org/whl/cu126
+      - torch
+      - torchvision
+      - timm
+      - ultralytics
+      - joblib
+      - streamlit
+      - plotly

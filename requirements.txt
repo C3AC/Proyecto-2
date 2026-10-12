@@ -1,3 +1,4 @@
+--extra-index-url https://download.pytorch.org/whl/cu126
 pandas
 numpy
 matplotlib
@@ -6,3 +7,10 @@ Pillow
 scikit-learn
 jupyter
 nbconvert
+torch
+torchvision
+timm
+ultralytics
+joblib
+streamlit
+plotly
