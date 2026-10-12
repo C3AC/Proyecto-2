@@ -58,6 +58,38 @@ codigo de carga de datos, limpieza y analisis exploratorio ya esta implementado 
 Antes de subir cambios, correr el notebook completo de inicio a fin (Kernel > Restart & Run All)
 para confirmar que no quedan celdas rotas.
 
+## Aplicación local
+
+App en Streamlit (backend y frontend en el mismo proceso de Python, sin despliegue web). Usa los
+modelos de `models/` y los resultados de `results/`, así que primero debe haber corrido el
+entrenamiento (`run_training.sh`).
+
+```
+conda activate mosquito-ml
+streamlit run app/streamlit_app.py      # abre http://localhost:8501
+```
+
+- **Cómo funciona:** el flujo detector → recorte → clasificadores y los hallazgos principales.
+- **Clasificar una imagen:** subir una foto (o usar una de prueba); el preprocesamiento (detección
+  con YOLOv8n y recorte idéntico al del entrenamiento) es invisible para el usuario. Se elige un
+  modelo, varios o todos, y se ve el consenso.
+- **Explorar los datos:** distribución de clases y variables del conjunto limpio, recortes por clase.
+- **Rendimiento de los modelos:** gráficas interactivas con los datos de prueba; se ocultan con el
+  interruptor de la barra lateral.
+
+`python app/inference.py` verifica que la app reproduce las predicciones de test guardadas.
+
+## Resumen de resultados para el informe
+
+```
+python app/summary.py                   # -> results/resumen_entrenamiento.md
+```
+
+Reúne datos y partición, preprocesamiento, recursos de cómputo, hiperparámetros y búsqueda de C,
+curvas de entrenamiento, métricas de test (globales, por clase, matrices de confusión), acuerdo
+entre modelos y resultados del detector. La app ofrece el mismo resumen más métricas y figuras
+como `.zip` (botón en la barra lateral). Las figuras estáticas salen de `python src/summarize_results.py`.
+
 ## Flujo de trabajo en git
 
 Se espera un commit por avance concreto (una seccion del notebook, una correccion, un dataset

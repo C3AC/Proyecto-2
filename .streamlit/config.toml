@@ -1,0 +1,15 @@
+# Superficies neutras + un solo acento azul (frío, asociado a confianza y salud); el naranja complementario
+# se reserva para resaltar (la caja del mosquito). La paleta de clases está validada para daltonismo.
+[theme]
+base = "light"
+primaryColor = "#2a78d6"
+backgroundColor = "#fcfcfb"
+secondaryBackgroundColor = "#f0efec"
+textColor = "#0b0b0b"
+
+[server]
+headless = true
+port = 8501
+
+[browser]
+gatherUsageStats = false
