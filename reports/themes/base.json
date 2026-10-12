@@ -1,0 +1,82 @@
+{
+  "_doc": "Tema de las figuras de resultados. Editar aquí (o crear otro JSON con \"extends\": \"base.json\" y solo las claves a cambiar). Uso: python src/make_figures.py --theme reports/themes/<tema>.json",
+
+  "output": {
+    "dir": "reports/figures/presentacion",
+    "formats": ["png", "svg"],
+    "dpi": 200,
+    "transparent": false,
+    "prefix": "res_"
+  },
+
+  "font": {
+    "family": ["Segoe UI", "Arial", "DejaVu Sans"],
+    "size": 12,
+    "title_size": 17,
+    "subtitle_size": 12,
+    "label_size": 12,
+    "tick_size": 11,
+    "annotation_size": 11,
+    "title_weight": "semibold"
+  },
+
+  "colors": {
+    "surface": "#fcfcfb",
+    "text_primary": "#0b0b0b",
+    "text_secondary": "#52514e",
+    "muted": "#898781",
+    "grid": "#e1e0d9",
+    "baseline": "#c3c2b7",
+    "categorical": ["#2a78d6", "#eb6834", "#1baf7a"],
+    "sequential": ["#e3edfa", "#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#256abf", "#184f95", "#0d366b"],
+    "highlight": "#d03b3b",
+    "fallback": "#898781"
+  },
+
+  "layout": {
+    "figsize": [11, 6.2],
+    "bar_height": 0.62,
+    "line_width": 2,
+    "marker_size": 9,
+    "show_subtitles": true,
+    "show_source_note": true
+  },
+
+  "families": [
+    {"key": "flat", "label": "DINOv2 congelado + clasificador plano"},
+    {"key": "hier", "label": "DINOv2 congelado + jerárquico"},
+    {"key": "cnn", "label": "CNN con ajuste fino"}
+  ],
+
+  "models": {
+    "dinov2_logreg": {"label": "DINOv2 + Regresión logística", "family": "flat", "marker": "o"},
+    "dinov2_svm": {"label": "DINOv2 + SVM (RBF)", "family": "flat", "marker": "s"},
+    "dinov2_hier_taxonomic": {"label": "Jerárquico taxonómico", "family": "hier", "marker": "D"},
+    "dinov2_hier_cascade": {"label": "Jerárquico en cascada", "family": "hier", "marker": "^"},
+    "efficientnet_b0": {"label": "EfficientNet-B0", "family": "cnn", "marker": "o"},
+    "convnext_tiny": {"label": "ConvNeXt-Tiny", "family": "cnn", "marker": "s"}
+  },
+
+  "classes": {
+    "aegypti": "Ae. aegypti",
+    "albopictus": "Ae. albopictus",
+    "anopheles": "Anopheles",
+    "culex": "Culex",
+    "culiseta": "Culiseta",
+    "japonicus/koreicus": "Ae. japonicus/koreicus"
+  },
+
+  "texts": {
+    "source_note": "Partición de prueba estratificada (15 %, n = 1,553). Elaboración propia.",
+    "class_distribution": {"title": "Dos clases concentran el 89 % de las imágenes", "subtitle": "Imágenes por clase en el conjunto limpio (n = 10,354)", "x": "Imágenes"},
+    "ranking": {"title": "Comparación de modelos por F1 macro", "subtitle": "F1 macro en test: cada clase pesa igual, sin importar su tamaño", "x": "F1 macro (test)"},
+    "f1_by_class": {"title": "El desempeño cae en las clases con pocos ejemplos", "subtitle": "F1 por clase en test; n = imágenes de entrenamiento"},
+    "recall_vs_support": {"title": "Recall por clase según el tamaño de la clase", "subtitle": "Mejor modelo de cada familia; clases ordenadas por imágenes de entrenamiento", "y": "Recall (test)"},
+    "confusion": {"title": "Matriz de confusión — {model}", "subtitle": "Filas normalizadas (proporción de cada clase real); el número es el conteo", "x": "Predicción", "y": "Clase real"},
+    "cost_vs_f1": {"title": "Desempeño frente a costo de inferencia", "subtitle": "Tiempo por imagen en la GTX 1650 (escala logarítmica)", "x": "Inferencia (ms por imagen)", "y": "F1 macro (test)"},
+    "training_curves": {"title": "Curvas de entrenamiento de las CNN", "loss": "Pérdida de entrenamiento", "val_f1": "F1 macro en validación", "x": "Época"},
+    "hierarchy": {"title": "Clasificación plana frente a jerárquica", "subtitle": "F1 por clase con el mismo backbone (DINOv2) y el mismo regularizador", "x": "F1 (test)"},
+    "detector_iou": {"title": "Calidad de localización del detector YOLOv8n", "subtitle": "IoU de la caja de mayor confianza en test; el reto exige IoU ≥ 0.75", "x": "IoU", "y": "Imágenes", "threshold_label": "{pct} supera 0.75"},
+    "gpu_benchmark": {"title": "Rendimiento de entrenamiento en la GTX 1650", "subtitle": "Imágenes por segundo, batch 32, 224 px (mayor es mejor)", "x": "Imágenes por segundo"}
+  }
+}

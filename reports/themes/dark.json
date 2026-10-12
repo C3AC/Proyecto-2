@@ -1,0 +1,16 @@
+{
+  "_doc": "Tema oscuro para diapositivas con fondo oscuro. Solo sobrescribe lo que cambia respecto a base.json.",
+  "extends": "base.json",
+  "output": {"dir": "reports/figures/presentacion_oscuro"},
+  "colors": {
+    "surface": "#1a1a19",
+    "text_primary": "#f0efec",
+    "text_secondary": "#c3c2b7",
+    "muted": "#898781",
+    "grid": "#2c2c2a",
+    "baseline": "#383835",
+    "categorical": ["#3987e5", "#d95926", "#199e70"],
+    "sequential": ["#1d2a3d", "#0d366b", "#184f95", "#256abf", "#3987e5", "#6da7ec", "#9ec5f4", "#cde2fb"],
+    "highlight": "#e66767"
+  }
+}
