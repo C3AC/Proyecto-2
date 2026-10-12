@@ -1,0 +1,77 @@
+{
+  "model": "dinov2_hier_taxonomic",
+  "macro_f1": 0.623261104575072,
+  "balanced_accuracy": 0.6836974703042124,
+  "accuracy": 0.8956857694784288,
+  "f1_per_class": {
+    "aegypti": 0.0,
+    "albopictus": 0.9244577412116679,
+    "anopheles": 0.5882352941176471,
+    "culex": 0.9525925925925925,
+    "culiseta": 0.7623762376237624,
+    "japonicus/koreicus": 0.5119047619047619
+  },
+  "recall_per_class": {
+    "aegypti": 0.0,
+    "albopictus": 0.8930635838150289,
+    "anopheles": 0.7692307692307693,
+    "culex": 0.9400584795321637,
+    "culiseta": 0.8279569892473119,
+    "japonicus/koreicus": 0.671875
+  },
+  "confusion_matrix": [
+    [
+      0,
+      5,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      6,
+      618,
+      1,
+      8,
+      7,
+      52
+    ],
+    [
+      0,
+      0,
+      10,
+      3,
+      0,
+      0
+    ],
+    [
+      1,
+      7,
+      8,
+      643,
+      20,
+      5
+    ],
+    [
+      0,
+      1,
+      2,
+      10,
+      77,
+      3
+    ],
+    [
+      1,
+      14,
+      0,
+      2,
+      4,
+      43
+    ]
+  ],
+  "family": "DINOv2 congelado + jerárquico (2 niveles)",
+  "C": 0.1,
+  "best_val_macro_f1": 0.6096793017219866,
+  "train_seconds": 15.438092708587646,
+  "infer_ms_per_img": 35.98991851560345
+}

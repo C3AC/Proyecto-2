@@ -1,0 +1,19 @@
+[dinov2_logreg] tuning
+   C=0.01   val F1=0.6195
+   C=0.1    val F1=0.6335
+   C=1.0    val F1=0.6234
+   C=10.0   val F1=0.5809
+[dinov2_logreg] macro F1 = 0.6298 | balanced acc = 0.7066
+[dinov2_svm] tuning
+C:\Users\Acer\miniforge3\envs\mosquito-ml\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+C:\Users\Acer\miniforge3\envs\mosquito-ml\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+C:\Users\Acer\miniforge3\envs\mosquito-ml\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+   C=1.0    val F1=0.6836
+   C=3.0    val F1=0.6912
+   C=10.0   val F1=0.6917
+[dinov2_svm] macro F1 = 0.6644 | balanced acc = 0.6180
+[dinov2_hier_taxonomic] macro F1 = 0.6233 | balanced acc = 0.6837
+[dinov2_hier_cascade] macro F1 = 0.6625 | balanced acc = 0.6889

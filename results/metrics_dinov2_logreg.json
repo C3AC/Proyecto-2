@@ -1,0 +1,77 @@
+{
+  "model": "dinov2_logreg",
+  "macro_f1": 0.6298085259985239,
+  "balanced_accuracy": 0.7065873917895752,
+  "accuracy": 0.9001931745009659,
+  "f1_per_class": {
+    "aegypti": 0.0,
+    "albopictus": 0.9308550185873606,
+    "anopheles": 0.5789473684210527,
+    "culex": 0.9514563106796117,
+    "culiseta": 0.7918781725888325,
+    "japonicus/koreicus": 0.5257142857142857
+  },
+  "recall_per_class": {
+    "aegypti": 0.0,
+    "albopictus": 0.9046242774566474,
+    "anopheles": 0.8461538461538461,
+    "culex": 0.9312865497076024,
+    "culiseta": 0.8387096774193549,
+    "japonicus/koreicus": 0.71875
+  },
+  "confusion_matrix": [
+    [
+      0,
+      6,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      4,
+      626,
+      1,
+      6,
+      3,
+      52
+    ],
+    [
+      0,
+      0,
+      11,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      7,
+      12,
+      637,
+      21,
+      7
+    ],
+    [
+      0,
+      1,
+      1,
+      8,
+      78,
+      5
+    ],
+    [
+      1,
+      13,
+      0,
+      2,
+      2,
+      46
+    ]
+  ],
+  "family": "DINOv2 congelado + clasificador plano",
+  "C": 0.1,
+  "best_val_macro_f1": 0.6334617190652548,
+  "train_seconds": 7.98852276802063,
+  "infer_ms_per_img": 35.971862568452586
+}
