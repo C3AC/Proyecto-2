@@ -228,8 +228,19 @@ def build():
         w(f"- IoU medio de la caja de mayor confianza: **{d['mean_iou']:.3f}**; imágenes con IoU ≥ 0.75 (umbral del reto): "
           f"**{d['iou_ge_075']:.1%}** de {d['n_test']:,}.")
         if "train_seconds" in d:
-            w(f"- Entrenamiento: {d['train_seconds'] / 60:.1f} min; inferencia: {d['infer_ms_per_img']:.1f} ms por imagen. "
-              f"Hiperparámetros: {d.get('hyperparams')}.")
+            hp = d.get("hyperparams", {})
+            log = ROOT / "models" / "detector" / "results.csv"
+            done = len(pd.read_csv(log)) if log.exists() else None
+            w(f"- Entrenamiento: {d['train_seconds'] / 60:.1f} min, YOLOv8n preentrenado (COCO), imagen de {hp.get('imgsz')} px, "
+              f"batch {hp.get('batch')}, AMP, paciencia 5; tope de {hp.get('epochs')} épocas y de {hp.get('hours')} h"
+              + (f" → se completaron **{done} épocas**" if done else "") + ". "
+              f"Inferencia: {d['infer_ms_per_img']:.1f} ms por imagen.")
+            if done:
+                r = pd.read_csv(log)
+                r.columns = r.columns.str.strip()
+                cols = [c for c in ("epoch", "metrics/precision(B)", "metrics/recall(B)", "metrics/mAP50(B)", "metrics/mAP50-95(B)") if c in r]
+                w("\n**Curva de entrenamiento del detector** (validación por época):\n")
+                w(table(r[cols].rename(columns=lambda c: c.replace("metrics/", "").replace("(B)", "")), "{:.3f}"))
     else:
         w("- Pendiente: todavía no existe `results/detector_summary.json` (correr `src/train_detector.py`).")
     w("")
