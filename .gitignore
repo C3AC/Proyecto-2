@@ -17,6 +17,9 @@ venv/
 .DS_Store
 
 # Entrenamiento
-yolov8n.pt            # checkpoint genérico de ultralytics, se descarga solo
-logs_run.txt          # salida combinada del runner; los logs por modelo están en logs/
-.claude/              # worktrees locales del asistente
+# checkpoint genérico de ultralytics (se descarga solo)
+yolov8n.pt
+# salida combinada del runner; los logs por modelo están en logs/
+logs_run.txt
+# worktrees locales del asistente
+.claude/
