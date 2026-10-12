@@ -1,0 +1,7 @@
+arch,amp,channels_last,img_per_s
+efficientnet_b0,False,False,115.9
+efficientnet_b0,True,False,120.6
+efficientnet_b0,True,True,16.1
+convnext_tiny,False,False,8.1
+convnext_tiny,True,False,13.0
+convnext_tiny,True,True,13.0
