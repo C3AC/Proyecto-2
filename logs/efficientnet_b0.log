@@ -1,0 +1,10 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+D:\Data Science\Proyecto2\src\train_cnn.py:115: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  sched.step()
+[efficientnet_b0] epoch 1/6 loss 1.9115 val F1 0.3788 (165s)
+[efficientnet_b0] epoch 2/6 loss 0.8277 val F1 0.4844 (72s)
+[efficientnet_b0] epoch 3/6 loss 0.6490 val F1 0.5404 (71s)
+[efficientnet_b0] epoch 4/6 loss 0.5827 val F1 0.5368 (72s)
+[efficientnet_b0] epoch 5/6 loss 0.5550 val F1 0.5600 (72s)
+[efficientnet_b0] epoch 6/6 loss 0.5362 val F1 0.5646 (72s)
+[efficientnet_b0] macro F1 = 0.5403 | balanced acc = 0.5680

@@ -1,0 +1,87 @@
+{
+  "model": "efficientnet_b0",
+  "macro_f1": 0.5403165932916195,
+  "balanced_accuracy": 0.5679578558124878,
+  "accuracy": 0.875724404378622,
+  "f1_per_class": {
+    "aegypti": 0.0,
+    "albopictus": 0.9187969924812031,
+    "anopheles": 0.19047619047619047,
+    "culex": 0.9378698224852071,
+    "culiseta": 0.6666666666666666,
+    "japonicus/koreicus": 0.5280898876404494
+  },
+  "recall_per_class": {
+    "aegypti": 0.0,
+    "albopictus": 0.8829479768786127,
+    "anopheles": 0.15384615384615385,
+    "culex": 0.9269005847953217,
+    "culiseta": 0.7096774193548387,
+    "japonicus/koreicus": 0.734375
+  },
+  "confusion_matrix": [
+    [
+      0,
+      5,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      10,
+      611,
+      1,
+      9,
+      7,
+      54
+    ],
+    [
+      0,
+      2,
+      2,
+      4,
+      4,
+      1
+    ],
+    [
+      7,
+      8,
+      3,
+      634,
+      26,
+      6
+    ],
+    [
+      2,
+      2,
+      0,
+      18,
+      66,
+      5
+    ],
+    [
+      1,
+      10,
+      2,
+      3,
+      1,
+      47
+    ]
+  ],
+  "family": "CNN fine-tune",
+  "train_seconds": 524.6317548751831,
+  "infer_ms_per_img": 12.26930685835505,
+  "best_val_macro_f1": 0.5646487187839836,
+  "hyperparams": {
+    "arch": "efficientnet_b0",
+    "epochs": 6,
+    "batch": 32,
+    "lr": 0.0005,
+    "workers": 3,
+    "img_size": 224,
+    "freeze_stages": 0
+  },
+  "trainable_params": 4015234,
+  "total_params": 4015234
+}
