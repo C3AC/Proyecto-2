@@ -1,0 +1,13 @@
+                model  macro_f1  balanced_accuracy  accuracy  train_seconds  infer_ms_per_img
+           dinov2_svm  0.664413           0.617950  0.940116     115.374125         37.322325
+  dinov2_hier_cascade  0.662486           0.688905  0.907276       9.474084         35.976011
+        dinov2_logreg  0.629809           0.706587  0.900193       7.988523         35.971863
+dinov2_hier_taxonomic  0.623261           0.683697  0.895686      15.438093         35.989919
+        convnext_tiny  0.565255           0.606170  0.892466    1055.424466         19.864363
+      efficientnet_b0  0.540317           0.567958  0.875724     524.631755         12.269307
+   res_01_comparacion_modelos.png
+   res_02_f1_por_clase.png
+   res_03_confusion_mejor_modelo.png
+   res_04_costo_vs_f1.png
+   res_05_curvas_entrenamiento.png
+   res_06_iou_detector.png
